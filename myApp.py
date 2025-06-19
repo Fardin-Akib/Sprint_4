@@ -8,7 +8,7 @@ st.write("In this project you will see a historgram and scatterplot I quickly ma
 "In the Histogram you will see the odometer reading for each brand of cars sold. In the scatterplot you will see a correlation between" \
 "model year of a car and the price it was sold at.")
 
-df = pd.read_csv(r"C:\Users\farki\Desktop\Data Science\Sprint_Four\Sprint_4\vehicles_us.csv")
+df = pd.read_csv(r"vehicles_us.csv")
 df = df.dropna()
 
 year_price_scatter = px.scatter(df, x="model_year", y="price", title="Price vs Model Year")
