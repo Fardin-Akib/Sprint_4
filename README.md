@@ -7,6 +7,9 @@ https://sprint-4-7xbu.onrender.com
 
 To run this website locally simply :
 1- Clone the repostiry to your local machine 
+
 2- Install the necessary libaries from requirements.txt by typing "pip install -r requirements.txt" on your windows terminal (command may vary based off the system you are on. 
+
 3- Run the app on streamlit by typing "streamlit run myApp.py"
+
 4- Click the link presented to you. 
