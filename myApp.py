@@ -19,7 +19,11 @@ df['is_4wd'] = df['is_4wd'].fillna(0.0)
 
 df = df.dropna()
 
-year_price_scatter = px.scatter(df, x="model_year", y="price", title="Price vs Model Year")
+models = df['model'].unique()
+selected_models = st.multiselect("Select Car Model(s):", models, default=models[0])
+filtered_df = df[df['model'].isin(selected_models)]
+
+year_price_scatter = px.scatter(filtered_df, x="model_year", y="price", title="Price vs Model Year")
 year_price_scatter.update_layout(
     xaxis_title="Model Year",
     yaxis_title="Price",
@@ -30,7 +34,7 @@ scatter_button = st.button("Scatter")
 if scatter_button:
     st.plotly_chart(year_price_scatter)
 
-brand_vs_odometer = px.histogram(df, x="model" , y="odometer", title= "Distance Travel via Brand")
+brand_vs_odometer = px.histogram(filtered_df, x="model" , y="odometer", title= "Distance Travel via Brand")
 brand_vs_odometer.update_layout(
     xaxis_title= "Model",
     yaxis_title= "Odometer",
