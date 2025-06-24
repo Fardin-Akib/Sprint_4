@@ -1,5 +1,5 @@
 pandas== 2.2.3
 scipy==1.15.2
 streamlit==1.45.1
-atlair==5.5.0
+atlair==5.1.2
 plotly==6.1.2
