@@ -6,6 +6,7 @@ To access the website simply click on the link below.
 https://sprint-4-7xbu.onrender.com
 
 To run this website locally simply :
+
 1- Clone the repostiry to your local machine 
 
 2- Install the necessary libaries from requirements.txt by typing "pip install -r requirements.txt" on your windows terminal (command may vary based off the system you are on. 
