@@ -9,6 +9,14 @@ st.write("In this project you will see a historgram and scatterplot I quickly ma
 "model year of a car and the price it was sold at.")
 
 df = pd.read_csv(r"C:\Users\farki\Desktop\Data Science\Sprint_Four\Sprint_4\vehicles_us.csv")
+
+for model in df['model'].unique():
+    median_value = df[df['model'] == model]['cylinders'].median()
+    
+    df.loc[df['model']==model, 'cylinders'] = df.loc[df['model']==model, 'cylinders'].fillna(median_value)
+
+df['is_4wd'] = df['is_4wd'].fillna(0.0)
+
 df = df.dropna()
 
 year_price_scatter = px.scatter(df, x="model_year", y="price", title="Price vs Model Year")
