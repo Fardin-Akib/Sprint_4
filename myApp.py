@@ -34,7 +34,7 @@ scatter_button = st.button("Scatter")
 if scatter_button:
     st.plotly_chart(year_price_scatter)
 
-brand_vs_odometer = px.histogram(filtered_df, x="model" , y="odometer", title= "Distance Travel via Brand")
+brand_vs_odometer = px.histogram(df, x="model" , y="odometer", title= "Distance Travel via Brand")
 brand_vs_odometer.update_layout(
     xaxis_title= "Model",
     yaxis_title= "Odometer",
